@@ -12,9 +12,9 @@ def get_inputs():
     st.title("Shelf Life Prediction App (Smart Packaging)")
     storage_temp = st.number_input("Storage Temperature (°C)")
     storage_humid = st.number_input("Storage Humidity (%)")
-    material_type = st.selectbox("Material Type", ["Glass", "HDPE", "PET", "PLA", "Paperboard"])
-    product_state = st.selectbox("Product State", ["Semisolid", "Solid"])
-    storage_cond = st.selectbox("Storage Condition", ["Chilled", "Refrigerated"])
+    material_type = st.selectbox("Material Type", ["Glass", "HDPE", "PET", "PLA", "Paperboard", "Aluminum"])
+    product_state = st.selectbox("Product State", ["Semisolid", "Solid", "Liquid"])
+    storage_cond = st.selectbox("Storage Condition", ["Chilled", "Refrigerated", "Ambient"])
     return {
         'storage_temp': storage_temp,
         'storage_humid': storage_humid,
