@@ -33,4 +33,4 @@ if __name__ == "__main__":
     X_input = get_inputs()
     if st.button("Predict Shelf Life"):
         result = predict(X_input)
-        st.success(f"Predicted Shelf Life: {result:.2f} months")
+        st.success(f"Predicted Shelf Life: {result:.0f} days")
