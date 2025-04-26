@@ -24,4 +24,4 @@ jobs:
 
     - name: Test App
       run: |
-        streamlit run chat2.py
+        streamlit run stream.py
