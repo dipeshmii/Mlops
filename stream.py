@@ -1,6 +1,8 @@
 import streamlit as st
 import pickle
 import numpy as np
+import pandas as pd
+
 
 # Load model
 model = pickle.load(open('shelf_life_mlp.pkl', 'rb'))
