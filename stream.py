@@ -14,13 +14,13 @@ def get_inputs():
     storage_humid = st.number_input("Storage Humidity (%)")
     material_type = st.selectbox("Material Type", ["Glass", "HDPE", "PET", "PLA", "Paperboard"])
     product_state = st.selectbox("Product State", ["Semisolid", "Solid"])
-    storage_condition = st.selectbox("Storage Condition", ["Chilled", "Refrigerated"])
+    storage_cond = st.selectbox("Storage Condition", ["Chilled", "Refrigerated"])
     return {
-        'Storage_Temperature': storage_temp,
-        'Storage_Humidity': storage_humid,
-        'Material_Type': material_type,
-        'Product_State': product_state,
-        'Storage_Condition': storage_condition
+        'storage_temp': storage_temp,
+        'storage_humid': storage_humid,
+        'material_type': material_type,
+        'product_state': product_state,
+        'storage_cond': storage_cond
     }
 
 # Prediction function
