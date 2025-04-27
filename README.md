@@ -1,4 +1,4 @@
-Streamlit App Link: https://streampy-6lyebtcqhwws4kikppzz2s.streamlit.app/](https://streampy-6lyebtcqhwws4kikppzz2s.streamlit.app/
+Streamlit App Link: https://streampy-6lyebtcqhwws4kikppzz2s.streamlit.app/
 
 Brief Description:
 
