@@ -1,27 +1,32 @@
-name: Deploy to Streamlit
+name: Train and Upload ML Model
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
-  deploy:
+  train-model:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v4
 
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.9'
+        python-version: 3.11
 
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
 
-    - name: Test App
+    - name: Run training script
       run: |
-        streamlit run stream.py
+        python src/train.py
+
+    - name: Upload MLflow Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: shelf-life-mlflow-artifacts
+        path: /tmp/mlruns
